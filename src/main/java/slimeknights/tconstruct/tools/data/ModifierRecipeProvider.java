@@ -75,6 +75,26 @@ public class ModifierRecipeProvider extends BaseRecipeProvider {
                             .setFluidAndTime(new FluidStack(TinkerFluids.moltenSlimesteel.get(), FluidValues.NUGGET * 3))
                             .setCast(TinkerCommons.obsidianPane, true)
                             .build(consumer, prefix(TinkerModifiers.slimesteelReinforcement, folder));
+    ItemCastingRecipeBuilder.tableRecipe(TinkerModifiers.searedReinforcement)
+                            .setFluidAndTime(new FluidStack(TinkerFluids.searedStone.get(), FluidValues.INGOT))
+                            .setCast(TinkerCommons.obsidianPane, true)
+                            .build(consumer, prefix(TinkerModifiers.searedReinforcement, folder));
+    ItemCastingRecipeBuilder.tableRecipe(TinkerModifiers.goldReinforcement)
+                            .setFluidAndTime(new FluidStack(TinkerFluids.moltenGold.get(), FluidValues.NUGGET * 3))
+                            .setCast(TinkerCommons.obsidianPane, true)
+                            .build(consumer, prefix(TinkerModifiers.goldReinforcement, folder));
+    ItemCastingRecipeBuilder.tableRecipe(TinkerModifiers.emeraldReinforcement)
+                            .setFluidAndTime(new FluidStack(TinkerFluids.moltenEmerald.get(), FluidValues.INGOT / 3))
+                            .setCast(TinkerCommons.obsidianPane, true)
+                            .build(consumer, prefix(TinkerModifiers.emeraldReinforcement, folder));
+    ItemCastingRecipeBuilder.tableRecipe(TinkerModifiers.bronzeReinforcement)
+                            .setFluidAndTime(new FluidStack(TinkerFluids.moltenTinkersBronze.get(), FluidValues.NUGGET * 3))
+                            .setCast(TinkerCommons.obsidianPane, true)
+                            .build(consumer, prefix(TinkerModifiers.bronzeReinforcement, folder));
+    ItemCastingRecipeBuilder.tableRecipe(TinkerModifiers.cobaltReinforcement)
+                            .setFluidAndTime(new FluidStack(TinkerFluids.moltenCobalt.get(), FluidValues.NUGGET * 3))
+                            .setCast(TinkerCommons.obsidianPane, true)
+                            .build(consumer, prefix(TinkerModifiers.cobaltReinforcement, folder));
 
     // silky cloth
     ShapedRecipeBuilder.shapedRecipe(TinkerModifiers.silkyCloth)
@@ -109,6 +129,8 @@ public class ModifierRecipeProvider extends BaseRecipeProvider {
     String upgradeSalvage = "tools/modifiers/salvage/upgrade/";
     String abilitySalvage = "tools/modifiers/salvage/ability/";
     String slotlessSalvage = "tools/modifiers/salvage/slotless/";
+    String armorFolder = "tools/modifiers/armor/";
+    String armorSalvage = "tools/modifiers/salvage/armor/";
 
     /*
      * durability
@@ -385,6 +407,40 @@ public class ModifierRecipeProvider extends BaseRecipeProvider {
                                     .setSlots(SlotType.UPGRADE, 1)
                                     .buildSalvage(consumer, prefix(TinkerModifiers.sweeping, upgradeSalvage))
                                     .build(consumer, prefix(TinkerModifiers.sweeping, upgradeFolder));
+    /*
+     * armor
+     */
+    IncrementalModifierRecipeBuilder.modifier(TinkerModifiers.protection.get())
+                                    .setInputSalvage(TinkerModifiers.cobaltReinforcement, 1, 24, false)
+                                    .setSlots(SlotType.ARMOR, 1)
+                                    .setTools(TinkerTags.Items.ARMOR)
+                                    .buildSalvage(consumer, prefix(TinkerModifiers.protection, armorSalvage))
+                                    .build(consumer, prefix(TinkerModifiers.protection, armorFolder));
+    IncrementalModifierRecipeBuilder.modifier(TinkerModifiers.projectileProtection.get())
+                                    .setInputSalvage(TinkerModifiers.bronzeReinforcement, 1, 24, false)
+                                    .setSlots(SlotType.ARMOR, 1)
+                                    .setTools(TinkerTags.Items.ARMOR)
+                                    .buildSalvage(consumer, prefix(TinkerModifiers.projectileProtection, armorSalvage))
+                                    .build(consumer, prefix(TinkerModifiers.projectileProtection, armorFolder));
+    IncrementalModifierRecipeBuilder.modifier(TinkerModifiers.blastProtection.get())
+                                    .setInputSalvage(TinkerModifiers.emeraldReinforcement, 1, 24, false)
+                                    .setSlots(SlotType.ARMOR, 1)
+                                    .setTools(TinkerTags.Items.ARMOR)
+                                    .buildSalvage(consumer, prefix(TinkerModifiers.blastProtection, armorSalvage))
+                                    .build(consumer, prefix(TinkerModifiers.blastProtection, armorFolder));
+    IncrementalModifierRecipeBuilder.modifier(TinkerModifiers.magicProtection.get())
+                                    .setInputSalvage(TinkerModifiers.goldReinforcement, 1, 24, false)
+                                    .setSlots(SlotType.ARMOR, 1)
+                                    .setTools(TinkerTags.Items.ARMOR)
+                                    .buildSalvage(consumer, prefix(TinkerModifiers.magicProtection, armorSalvage))
+                                    .build(consumer, prefix(TinkerModifiers.magicProtection, armorFolder));
+    IncrementalModifierRecipeBuilder.modifier(TinkerModifiers.fireProtection.get())
+                                    .setInputSalvage(TinkerModifiers.searedReinforcement, 1, 24, false)
+                                    .setSlots(SlotType.ARMOR, 1)
+                                    .setTools(TinkerTags.Items.ARMOR)
+                                    .buildSalvage(consumer, prefix(TinkerModifiers.fireProtection, armorSalvage))
+                                    .build(consumer, prefix(TinkerModifiers.fireProtection, armorFolder));
+
 
     /*
      * ability
