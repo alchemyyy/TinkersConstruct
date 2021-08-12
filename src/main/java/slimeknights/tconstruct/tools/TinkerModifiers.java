@@ -9,7 +9,9 @@ import net.minecraft.item.crafting.SpecialRecipeSerializer;
 import net.minecraft.potion.EffectType;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryBuilder;
 import slimeknights.mantle.registration.object.EnumObject;
@@ -31,6 +33,7 @@ import slimeknights.tconstruct.library.recipe.modifiers.salvage.ModifierSalvage;
 import slimeknights.tconstruct.library.recipe.modifiers.severing.AgeableSeveringRecipe;
 import slimeknights.tconstruct.library.recipe.modifiers.severing.SeveringRecipe;
 import slimeknights.tconstruct.library.tools.SlotType;
+import slimeknights.tconstruct.library.tools.capability.EntityModifierDataCapability;
 import slimeknights.tconstruct.library.tools.item.IModifiable;
 import slimeknights.tconstruct.shared.block.SlimeType;
 import slimeknights.tconstruct.tools.item.CreativeSlotItem;
@@ -324,4 +327,12 @@ public final class TinkerModifiers extends TinkerModule {
    * Global loot managers
    */
   public static final RegistryObject<ModifierLootModifier.Serializer> modifierLootModifier = GLOBAL_LOOT_MODIFIERS.register("modifier_hook", ModifierLootModifier.Serializer::new);
+
+  /*
+   * Events
+   */
+  @SubscribeEvent
+  void commonSetup(final FMLCommonSetupEvent event) {
+    EntityModifierDataCapability.register();
+  }
 }
