@@ -66,7 +66,7 @@ public class TinkerTools extends AbstractToolPulse {
   @SidedProxy(clientSide = "slimeknights.tconstruct.tools.ToolClientProxy", serverSide = "slimeknights.tconstruct.common.CommonProxy")
   public static CommonProxy proxy;
 
-  // Blocks
+  // <3
   public static BlockToolTable toolTables;
   public static BlockToolForge toolForge;
 
