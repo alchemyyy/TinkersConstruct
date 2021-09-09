@@ -206,9 +206,6 @@ public class TinkerModifiers extends AbstractToolPulse {
     modSmite = registerModifier(modSmite);
     modSmite.addItem(TinkerCommons.consecratedSoil, 1, 1);
 
-    modSoulbound = registerModifier(new ModSoulbound());
-    modSoulbound.addItem(Items.NETHER_STAR);
-
     modCreative = registerModifier(new ModCreative());
     modCreative.addItem(TinkerCommons.matCreativeModifier, 1, 1);
 

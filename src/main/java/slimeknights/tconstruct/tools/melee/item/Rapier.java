@@ -47,7 +47,7 @@ public class Rapier extends SwordCore {
 
   @Override
   public double attackSpeed() {
-    return 3;
+    return 100;
   }
 
   @Override

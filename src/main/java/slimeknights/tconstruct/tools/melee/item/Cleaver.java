@@ -55,7 +55,7 @@ public class Cleaver extends SwordCore {
 
   @Override
   public double attackSpeed() {
-    return 0.7d;
+    return 1d;
   }
 
   @Override

@@ -13,7 +13,7 @@ buildscript {
         jcenter()
         maven {
             name = "forge"
-            url = "https://files.minecraftforge.net/maven"
+            url = "https://maven.minecraftforge.net/"
         }
         maven {
             name = "sonatype"
@@ -44,7 +44,7 @@ repositories {
     }
     maven {
         name 'forge'
-        url 'https://files.minecraftforge.net/maven'
+        url 'https://maven.minecraftforge.net'
     }
     maven {
          name "Tehnut Maven FS"
@@ -105,7 +105,7 @@ task buildInfo {
 }
 ext.artifact_version = 'NFG'
 if (System.getenv().ARTIFACT_VERSION == null) {
-    artifact_version = "${config.mod_version}.${project.buildInfo.buildNum}"
+    artifact_version = "${config.mod_version}.183"
 }
 if (System.getenv().ARTIFACT_VERSION != null) {
     artifact_version = "${system.getenv().ARTIFACT_VERSION}"

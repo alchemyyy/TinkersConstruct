@@ -73,7 +73,7 @@ public class Kama extends AoeToolCore {
 
   @Override
   public double attackSpeed() {
-    return 1.3f;
+    return 1f;
   }
 
   @Override

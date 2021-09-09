@@ -103,7 +103,7 @@ public class Mattock extends AoeToolCore {
 
   @Override
   public double attackSpeed() {
-    return 0.9f;
+    return 1f;
   }
 
   @Override

@@ -37,7 +37,7 @@ public class BroadSword extends SwordCore {
 
   @Override
   public double attackSpeed() {
-    return 1.6d; // default vanilla sword speed
+    return 1d; // default vanilla sword speed
   }
 
   // sword sweep attack

@@ -54,12 +54,12 @@ public class Hammer extends Pickaxe {
 
   @Override
   public float damagePotential() {
-    return 1.2f;
+    return 1.1f;
   }
 
   @Override
   public double attackSpeed() {
-    return 0.8f;
+    return 1f;
   }
 
   @Override

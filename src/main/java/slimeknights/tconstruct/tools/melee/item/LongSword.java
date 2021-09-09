@@ -40,7 +40,7 @@ public class LongSword extends SwordCore {
 
   @Override
   public double attackSpeed() {
-    return 1.4;
+    return 1;
   }
 
   @Override

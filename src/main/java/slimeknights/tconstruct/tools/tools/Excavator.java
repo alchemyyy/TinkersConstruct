@@ -48,12 +48,12 @@ public class Excavator extends Shovel {
 
   @Override
   public float damagePotential() {
-    return 1.25f;
+    return 1f;
   }
 
   @Override
   public double attackSpeed() {
-    return 0.7f;
+    return 1f;
   }
 
   @Override

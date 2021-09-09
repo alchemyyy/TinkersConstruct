@@ -54,7 +54,7 @@ public class BattleSign extends TinkerToolCore {
 
   @Override
   public double attackSpeed() {
-    return 1.2;
+    return 1;
   }
 
   @Override

@@ -64,7 +64,7 @@ public class Pickaxe extends AoeToolCore {
 
   @Override
   public double attackSpeed() {
-    return 1.2f;
+    return 1f;
   }
 
   @Override

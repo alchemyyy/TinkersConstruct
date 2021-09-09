@@ -186,7 +186,7 @@ public class FryPan extends TinkerToolCore {
 
   @Override
   public double attackSpeed() {
-    return 1.4d;
+    return 1d;
   }
 
   @Override

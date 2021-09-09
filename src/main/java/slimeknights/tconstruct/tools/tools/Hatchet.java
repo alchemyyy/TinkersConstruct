@@ -50,12 +50,12 @@ public class Hatchet extends AoeToolCore {
 
   @Override
   public float damagePotential() {
-    return 1.1f;
+    return 0.85f;
   }
 
   @Override
   public double attackSpeed() {
-    return 1.1f; // a bit faster than vanilla axes
+    return 1f; // a bit faster than vanilla axes
   }
 
   @Override
