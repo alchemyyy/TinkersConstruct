@@ -120,7 +120,7 @@ public class ModBeheading extends ToolModifier {
   }
 
   private boolean shouldDropHead(int level) {
-    return level > 0 && level > random.nextInt(10);
+    return level > 0 && level > random.nextInt(20);
   }
 
   private boolean alreadyContainsDrop(LivingDropsEvent event, ItemStack head) {
